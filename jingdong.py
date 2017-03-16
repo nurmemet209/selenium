@@ -69,7 +69,7 @@ def start(driver):
             scrollTop(driver)
             driver.execute_script(nextPage)
 
-            time.sleep(10)
+            time.sleep(5)
             # 抓取数据
             grabData(driver)
             pageNum = pageNum + 1
@@ -79,7 +79,6 @@ def start(driver):
 
 
 driver = webdriver.Chrome()
-
 start(driver)
 # print(pre_1.find_element_by_class_name("disabled"))
 # grabJd(driver)
