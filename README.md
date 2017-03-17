@@ -1,6 +1,6 @@
 # selenium
 
-### [selenium官方文档](http://docs.seleniumhq.org/docs/)
+### [selenium官方文档](http://docs.seleniumhq.org/docs/),[selenium-python官方文档](https://selenium-python.readthedocs.io/installation.html#introduction)
 
 ### 爬取京东
 
