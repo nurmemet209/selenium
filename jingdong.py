@@ -80,6 +80,5 @@ def start(driver):
             break
     print("quite")
 
-
 driver = webdriver.Chrome()
 start(driver)
