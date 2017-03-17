@@ -81,5 +81,5 @@ def start(driver):
     print("quite")
 
 
-driver = webdriver.Chrome()
+driver = webdriver.PhantomJS("D:\software\phantomjs\phantomjs.exe")
 start(driver)

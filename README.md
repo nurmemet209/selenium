@@ -1,8 +1,10 @@
 # selenium
 
+## [selenium官方文档](http://docs.seleniumhq.org/docs/)
+
 ## 爬取京东
 
-```pyton
+```python
 from selenium import webdriver
 import time
 
@@ -88,6 +90,14 @@ start(driver)
 
 ```
 
+![](screenshot/jd_path.png)
+
+
+```python
+# 安装chromedriver并配置环境变量
+driver = webdriver.Chrome()
+```
+
 京东商品搜索结果列表dom节点结构
 ![](screenshot/jd_dom.png)
 获取所有的商品列表
@@ -156,8 +166,25 @@ def getNextPage(driver):
         return None
 ```
 
-```python
 
+```python
 # 加载下一页
 driver.execute_script(nextPage)
+```
+
+```python
+# 滚动浏览器指定的距离
+# linear 是变换模式，60000是速度
+driver.execute_script("$('html, body').animate({scrollTop: 20000,scrollLeft:0},60000,'linear');")
+```
+
+```python
+# 滚动浏览器到a元素可见,arguments[0]是传过去的参数a
+a=driver.find_element_by_class_name("pn-next")
+driver.execute_script("arguments[0].scrollIntoView(true);",a)
+```
+
+```python
+# 返回html页面源码
+driver.page_source.encode('gbk', 'ignore')
 ```
