@@ -188,3 +188,8 @@ driver.execute_script("arguments[0].scrollIntoView(true);",a)
 # 返回html页面源码
 driver.page_source.encode('gbk', 'ignore')
 ```
+
+```python
+# 通过xpath属性值查找元素,查找input src属性为images/blue_3.jpg或/images/blue_3.jpg
+search_btn = driver.find_element_by_xpath("//input[@src='images/blue_3.jpg'|@src='/images/blue_3.jpg']")
+```
